@@ -1,0 +1,118 @@
+import { Callout, Cards } from "nextra/components";
+
+<div
+  style={{
+    margin: "0 0 24px",
+    padding: "24px",
+    borderRadius: "16px",
+    background:
+      "linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,64,175,0.95) 55%, rgba(8,145,178,0.9) 100%)",
+    color: "white",
+  }}
+>
+  <p
+    style={{
+      margin: 0,
+      fontSize: "12px",
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
+      opacity: 0.85,
+    }}
+  >
+    Docs Hub
+  </p>
+  <h1 style={{ margin: "8px 0 10px", fontSize: "34px", lineHeight: 1.15 }}>
+    Build Faster With Clear Documentation
+  </h1>
+  <p style={{ margin: 0, maxWidth: "700px", fontSize: "16px", opacity: 0.95 }}>
+    A practical entry point for specs, advanced notes, and implementation
+    guidance. Start with the essentials, then drill into details.
+  </p>
+</div>
+
+<Callout type="info">
+  Dev mode live refresh is enabled. Run npm run start and save any md or mdx
+  page.
+</Callout>
+
+## Choose Your Path
+
+<Cards num={3}>
+  <Cards.Card title="Read Spec First" href="/advanced/tab-item">
+    Open the latest Tab Item specification with states, tokens, and
+    accessibility.
+  </Cards.Card>
+  <Cards.Card title="Go Advanced" href="/advanced">
+    Explore deeper technical pages and implementation-focused guidance.
+  </Cards.Card>
+  <Cards.Card title="Understand Context" href="/about">
+    See project goals, ownership context, and documentation scope.
+  </Cards.Card>
+</Cards>
+
+## What You Can Find Here
+
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "12px",
+    margin: "10px 0 24px",
+  }}
+>
+  <div
+    style={{
+      border: "1px solid #dbe3f0",
+      borderRadius: "12px",
+      padding: "14px",
+    }}
+  >
+    <strong>Component specs</strong>
+    <p style={{ margin: "8px 0 0" }}>
+      Anatomy, properties, states, and exact token usage.
+    </p>
+  </div>
+  <div
+    style={{
+      border: "1px solid #dbe3f0",
+      borderRadius: "12px",
+      padding: "14px",
+    }}
+  >
+    <strong>Implementation notes</strong>
+    <p style={{ margin: "8px 0 0" }}>
+      Practical guidance for converting design intent into code.
+    </p>
+  </div>
+  <div
+    style={{
+      border: "1px solid #dbe3f0",
+      borderRadius: "12px",
+      padding: "14px",
+    }}
+  >
+    <strong>Reference pages</strong>
+    <p style={{ margin: "8px 0 0" }}>
+      Extra examples and patterns in <a href="/another">Another Page</a>.
+    </p>
+  </div>
+</div>
+
+## Contribution Checklist
+
+1. Add or edit pages in pages/.
+2. Use md for simple docs and mdx for interactive sections.
+3. Keep headings concise and content easy to scan.
+
+## Versioning
+
+<Cards num={2}>
+  <Cards.Card title="Latest (v1.1)" href="/advanced/tab-item">
+    Use this for current implementation and active development.
+  </Cards.Card>
+  <Cards.Card title="Archived (v1.0.0)" href="/v1.0.0/components/tab-item">
+    Use this for legacy reference and backward-compatibility checks.
+  </Cards.Card>
+</Cards>
+
+See full version index on <a href="/versions">Versions</a>.

@@ -2,6 +2,8 @@
 
 Source of truth (Figma): [Ui Kit 1.0 - Tab Item](https://www.figma.com/design/CSTmHAMHrIN2rmnimwjV1z/Ui-Kit-1.0?node-id=10804-133&t=DwumgykElA4LLHvj-4)
 
+![Tab Item — tutti gli stati](/images/tab-item/overview.png)
+
 Singola tab all'interno di una Tab Bar. Larghezza hug, **max 320px**. Oltre il limite, la label viene troncata con ellipsis (...). Altezza fissa **48px**.
 
 ## Content Variants (Ufficiali)
@@ -17,12 +19,12 @@ Singola tab all'interno di una Tab Bar. Larghezza hug, **max 320px**. Oltre il l
 
 ## Stati
 
-| State | Background | Border-bottom | Label color | Note |
-|-------|------------|--------------|-------------|------|
-| **Default** | — | `transparent` | `color/text/tertiary` `#97999b` | Stato base |
-| **Hover** | `rgba(0,0,0,0.04)` | `transparent` | `color/text/tertiary` `#97999b` | |
-| **Active** | — | `4px solid color/black/100` `#000` | `color/text/primary` `#000` | Una sola tab attiva alla volta |
-| **Disabled** | — | `transparent` | `color/text/tertiary` `#97999b` | `opacity: 0.4`, non interattivo |
+| State | Preview | Background | Border-bottom | Label color | Note |
+|-------|---------|------------|--------------|-------------|------|
+| **Default** | ![Default](/images/tab-item/state-default.png) | — | `transparent` | `color/text/tertiary` `#97999b` | Stato base |
+| **Hover** | ![Hover](/images/tab-item/state-hover.png) | `rgba(0,0,0,0.04)` | `transparent` | `color/text/tertiary` `#97999b` | |
+| **Active** | ![Active](/images/tab-item/state-active.png) | — | `4px solid color/black/100` `#000` | `color/text/primary` `#000` | Una sola tab attiva alla volta |
+| **Disabled** | ![Disabled](/images/tab-item/state-disabled.png) | — | `transparent` | `color/text/tertiary` `#97999b` | `opacity: 0.4`, non interattivo |
 
 ## Properties
 
@@ -97,41 +99,3 @@ Singola tab all'interno di una Tab Bar. Larghezza hug, **max 320px**. Oltre il l
 - Non usare icone Filled — solo Outline 14×14
 - Non sostituire il colore della border-bottom in stato Active
 
-## Reference CSS
-
-```css
-/* Tab Item — container */
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-padding: 0 16px;       /* spacing/4 */
-gap: 8px;              /* spacing/2 */
-
-height: 48px;          /* spacing/12 */
-max-width: 320px;
-
-/* border-bottom è sempre presente; solo il colore cambia */
-border-bottom: 4px solid transparent;
-
-/* State: Hover */
-background: rgba(0, 0, 0, 0.04);
-
-/* State: Active */
-border-bottom-color: var(--color\/black\/100, #000000);
-
-/* State: Disabled */
-opacity: 0.4;
-pointer-events: none;
-
-/* Label */
-font-family: 'Roboto', sans-serif;
-font-weight: 700;
-font-size: 13px;
-line-height: 21px;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-color: var(--color\/text\/tertiary, #97999b); /* Default/Hover/Disabled */
-/* color: var(--color\/text\/primary, #000);   Active */
-```

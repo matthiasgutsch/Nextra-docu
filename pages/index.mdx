@@ -1,100 +1,151 @@
+---
+title: Home
+sidebar: false
+toc: false
+---
+
 import { Callout, Cards } from "nextra/components";
 
 <div
   style={{
-    margin: "0 0 24px",
-    padding: "24px",
-    borderRadius: "16px",
-    background:
-      "linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(30,64,175,0.95) 55%, rgba(8,145,178,0.9) 100%)",
-    color: "white",
+    margin: "0 0 22px",
+    padding: "0",
+    border: "1px solid #e5e7eb",
+    borderRadius: "18px",
+    overflow: "hidden",
+    background: "#ffffff",
   }}
 >
-  <p
+  <div
     style={{
-      margin: 0,
-      fontSize: "12px",
-      letterSpacing: "0.08em",
-      textTransform: "uppercase",
-      opacity: 0.85,
+      display: "grid",
+      gridTemplateColumns: "1.4fr 1fr",
+      gap: "0",
     }}
   >
-    Docs Hub
-  </p>
-  <h1 style={{ margin: "8px 0 10px", fontSize: "34px", lineHeight: 1.15 }}>
-    Build Faster With Clear Documentation
-  </h1>
-  <p style={{ margin: 0, maxWidth: "700px", fontSize: "16px", opacity: 0.95 }}>
-    A practical entry point for specs, advanced notes, and implementation
-    guidance. Start with the essentials, then drill into details.
-  </p>
+    <div
+      style={{
+        padding: "30px",
+        background:
+          "linear-gradient(155deg, #0b132b 0%, #1d4ed8 52%, #06b6d4 100%)",
+        color: "#ffffff",
+      }}
+    >
+      <div
+        style={{
+          fontSize: "11px",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          opacity: 0.9,
+          marginBottom: "10px",
+        }}
+      >
+        Documentation Portal
+      </div>
+      <h1 style={{ margin: "0 0 10px", fontSize: "36px", lineHeight: 1.1 }}>
+        Find The Right Answer Fast
+      </h1>
+      <div style={{ fontSize: "16px", lineHeight: 1.6, maxWidth: "640px" }}>
+        A practical home for component specs, implementation notes, and archived
+        versions. Start with a guided path or jump directly to the page you need.
+      </div>
+    </div>
+
+    <div style={{ padding: "26px", background: "#f8fafc" }}>
+      <div style={{ fontWeight: 700, marginBottom: "10px" }}>
+        Start In 60 Seconds
+      </div>
+      <ol style={{ margin: 0, paddingLeft: "18px", lineHeight: 1.8 }}>
+        <li>
+          Open <a href="/advanced/tab-item">Tab Item Spec</a>
+        </li>
+        <li>
+          Review <a href="/advanced">Advanced Guides</a>
+        </li>
+        <li>
+          Check historical docs in <a href="/versions">Versions</a>
+        </li>
+      </ol>
+      <div style={{ marginTop: "14px", fontSize: "13px", color: "#334155" }}>
+        Tip: Run <strong>npm run start</strong> for live updates while editing docs.
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <Callout type="info">
-  Dev mode live refresh is enabled. Run npm run start and save any md or mdx
-  page.
+  This homepage is organized by intent: learn, implement, or reference legacy
+  versions.
 </Callout>
 
-## Choose Your Path
+## Browse By Intent
 
 <Cards num={3}>
-  <Cards.Card title="Read Spec First" href="/advanced/tab-item">
-    Open the latest Tab Item specification with states, tokens, and
-    accessibility.
+  <Cards.Card title="Implement A Component" href="/advanced/tab-item">
+    States, anatomy, tokens, and accessibility guidance for active development.
   </Cards.Card>
-  <Cards.Card title="Go Advanced" href="/advanced">
-    Explore deeper technical pages and implementation-focused guidance.
+  <Cards.Card title="Deep-Dive Technical Notes" href="/advanced">
+    Architecture-level references and advanced implementation topics.
   </Cards.Card>
-  <Cards.Card title="Understand Context" href="/about">
-    See project goals, ownership context, and documentation scope.
+  <Cards.Card title="Project Context" href="/about">
+    Scope, purpose, and team context for this documentation set.
   </Cards.Card>
 </Cards>
 
-## What You Can Find Here
+## Documentation Lanes
 
 <div
   style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-    gap: "12px",
-    margin: "10px 0 24px",
+    margin: "8px 0 24px",
+    border: "1px solid #e5e7eb",
+    borderRadius: "14px",
+    overflow: "hidden",
   }}
 >
   <div
     style={{
-      border: "1px solid #dbe3f0",
-      borderRadius: "12px",
-      padding: "14px",
+      display: "grid",
+      gridTemplateColumns: "170px 1fr",
+      borderBottom: "1px solid #e5e7eb",
     }}
   >
-    <strong>Component specs</strong>
-    <p style={{ margin: "8px 0 0" }}>
-      Anatomy, properties, states, and exact token usage.
-    </p>
+    <div style={{ background: "#f8fafc", padding: "14px", fontWeight: 700 }}>
+      Latest
+    </div>
+    <div style={{ padding: "14px" }}>
+      Current source of truth for active product development. Entry page:{" "}
+      <a href="/advanced/tab-item">Tab Item Spec</a>.
+    </div>
   </div>
   <div
     style={{
-      border: "1px solid #dbe3f0",
-      borderRadius: "12px",
-      padding: "14px",
+      display: "grid",
+      gridTemplateColumns: "170px 1fr",
+      borderBottom: "1px solid #e5e7eb",
     }}
   >
-    <strong>Implementation notes</strong>
-    <p style={{ margin: "8px 0 0" }}>
-      Practical guidance for converting design intent into code.
-    </p>
+    <div style={{ background: "#f8fafc", padding: "14px", fontWeight: 700 }}>
+      Advanced
+    </div>
+    <div style={{ padding: "14px" }}>
+      In-depth technical notes and implementation detail pages. Entry page:{" "}
+      <a href="/advanced">Advanced</a>.
+    </div>
   </div>
   <div
     style={{
-      border: "1px solid #dbe3f0",
-      borderRadius: "12px",
-      padding: "14px",
+      display: "grid",
+      gridTemplateColumns: "170px 1fr",
     }}
   >
-    <strong>Reference pages</strong>
-    <p style={{ margin: "8px 0 0" }}>
-      Extra examples and patterns in <a href="/another">Another Page</a>.
-    </p>
+    <div style={{ background: "#f8fafc", padding: "14px", fontWeight: 700 }}>
+      Archive
+    </div>
+    <div style={{ padding: "14px" }}>
+      Previous versions for legacy reference and compatibility checks. Entry
+      page: <a href="/v1.0.0/components/tab-item">v1.0.0 Tab Item</a>.
+    </div>
   </div>
 </div>
 
